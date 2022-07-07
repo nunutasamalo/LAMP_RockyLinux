@@ -1,0 +1,7 @@
+sudo yum install httpd
+sudo systemctl start httpd.service
+chcek from the rowser:
+http://ip
+
+Finally, set up Apache to start at boot:
+sudo systemctl enable httpd.service
