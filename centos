@@ -5,3 +5,29 @@ http://ip
 
 Finally, set up Apache to start at boot:
 sudo systemctl enable httpd.service
+
+
+#sudo yum clean all 
+
+To Install MariaDB Server, execute the following command:
+
+#sudo yum install MariaDB-server
+
+# systemctl start mariadb
+# systemctl enable mariadb
+# systemctl status mariadb
+
+# mysql_secure_installation
+
+
+allow remote acces:
+# vi /etc/my.cnf.d/server.cnf
+
+bind-address = 0.0.0.0
+
+CREATE USER 'username'@'%' IDENTIFIED BY 'password';
+GRANT ALL ON *.* TO 'username'@'%';
+FLUSH PRIVILEGES;
+
+SELECT User, Host, Password FROM mysql.user;
+
